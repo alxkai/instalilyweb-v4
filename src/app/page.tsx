@@ -1,5 +1,5 @@
 import { getProfile } from "@/lib/sanity"
-import { HomePageClient } from "@/components/home/home-page-client"
+import { HomePageClient } from "../components/home/home-page-client"
 
 interface ProfileType {
   _id: string

@@ -7,8 +7,8 @@ export default function BookADemoPage() {
   return (
     <>
       <div className="min-h-screen bg-[#fdfff7]">
-        <div className="sticky top-0 z-50 w-full">
-          <div className="w-full max-w-[1340px] mx-auto pt-4">
+        <div className="sticky top-0 z-[100] w-full">
+          <div className="w-full max-w-[1340px] mx-auto sm:pt-4">
             <Nav />
           </div>
         </div>
