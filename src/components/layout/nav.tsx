@@ -128,7 +128,7 @@ export function Nav() {
         
         {/* Drawer */}
         <div
-          className={`absolute right-0 top-0 h-full w-80 max-w-[85vw] bg-gradient-to-b from-[#000000] to-[#333333] transform transition-transform duration-300 ease-in-out ${
+          className={`absolute right-0 top-0 h-full w-80 max-w-[85vw] backdrop-blur-[2px] backdrop-filter bg-gradient-to-b from-[#000000cc] to-[#333333cc] transform transition-transform duration-300 ease-in-out ${
             isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
           }`}
         >

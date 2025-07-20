@@ -59,7 +59,7 @@ export function HomePageClient({ profiles }: HomePageClientProps) {
 
       {/* Sticky Navigation */}
       <div className="sticky top-0 z-[100] w-full">
-        <div className="w-full max-w-[1340px] mx-auto pt-4">
+        <div className="w-full max-w-[1340px] mx-auto md:pt-4">
           <Nav />
         </div>
       </div>
