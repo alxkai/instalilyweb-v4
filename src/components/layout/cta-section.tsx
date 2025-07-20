@@ -1,5 +1,3 @@
-import Link from "next/link"
-
 export function CTASection() {
   return (
     <section className="bg-gray-900 text-white">
@@ -11,18 +9,18 @@ export function CTASection() {
           Stop dwelling on the limits of work — build it. Let&apos;s discuss your specific challenges so we can deploy InstaWorkers™ that deliver immediate value.
         </p>
         <div className="flex flex-col md:flex-row gap-4 justify-center">
-          <Link
-            href="/get-started"
+          <a
+            href="/book-a-demo"
             className="bg-white text-gray-900 px-8 py-3 rounded font-medium hover:bg-gray-200 transition-colors"
           >
             Get Started
-          </Link>
-          <Link
-            href="/docs"
+          </a>
+          <a
+            href="/book-a-demo"
             className="border border-white/30 px-8 py-3 rounded font-medium hover:bg-white/10 transition-colors"
           >
-            View Documentation
-          </Link>
+            Book a Demo
+          </a>
         </div>
       </div>
     </section>

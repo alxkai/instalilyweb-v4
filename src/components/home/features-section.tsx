@@ -24,38 +24,46 @@ const features = [
 export function FeaturesSection() {
   const [openFeature, setOpenFeature] = useState<string | null>(null);
 
+  const toggleFeature = (title: string) => {
+    setOpenFeature(openFeature === title ? null : title);
+  };
+
   return (
-    <div className="py-32 pt-40 px-4">
-      <h2 className="font-semibold text-5xl text-black mb-12">More than just automation.</h2>
-      <div onMouseLeave={() => setOpenFeature(null)}>
+    <div className="py-24 md:py-32 px-4">
+      <h2 className="font-semibold text-3xl md:text-5xl text-black mb-12">More than just automation.</h2>
+      <div>
         {features.map((feature) => {
           const isOpen = openFeature === feature.title;
           return (
             <div
               key={feature.title}
-              className={`border-b border-gray-200 transition-colors duration-300 ease-in-out ${
+              className={`border-b border-gray-200 transition-all duration-300 ease-in-out ${
                 isOpen ? 'bg-[#181818] text-white' : 'bg-transparent text-black'
               }`}
             >
               <div
-                className="py-12 px-6 cursor-pointer flex justify-between items-center"
-                onMouseEnter={() => setOpenFeature(feature.title)}
+                className="py-8 md:py-12 px-4 md:px-6 cursor-pointer flex justify-between items-center"
+                onClick={() => toggleFeature(feature.title)}
               >
-                <h3 className="font-medium text-4xl">{feature.title}</h3>
-                {isOpen ? (
-                  <Minus className="w-8 h-8" />
-                ) : (
-                  <Plus className="w-8 h-8" />
-                )}
+                <h3 className="font-medium text-lg md:text-4xl">{feature.title}</h3>
+                <div className="transition-transform duration-300 ease-in-out">
+                  {isOpen ? (
+                    <Minus className="w-6 h-6 md:w-8 md:h-8" />
+                  ) : (
+                    <Plus className="w-6 h-6 md:w-8 md:h-8" />
+                  )}
+                </div>
               </div>
               <div
-                className={`overflow-hidden transition-[max-height] ease-in-out ${
-                  isOpen ? 'duration-500 max-h-96' : 'duration-0 max-h-0'
+                className={`overflow-hidden transition-all duration-500 ease-in-out ${
+                  isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
                 }`}
               >
-                <div className="px-6 pb-16 md:pl-24">
+                <div className={`px-4 md:px-6 pb-12 md:pb-16 md:pl-24 transform transition-transform duration-500 ease-in-out ${
+                  isOpen ? 'translate-y-0' : '-translate-y-4'
+                }`}>
                   <p
-                    className={`text-2xl leading-relaxed transition-colors duration-300 ${
+                    className={`text-base md:text-2xl leading-relaxed transition-colors duration-300 ${
                       isOpen ? 'text-gray-300' : 'text-gray-700'
                     }`}
                   >

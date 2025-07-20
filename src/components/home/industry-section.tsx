@@ -4,31 +4,30 @@ import { useState } from 'react';
 
 const industries = [
   {
-    name: '01. RETAIL & E-COMMERCE',
-    description:
-      'Empower store associates with AI-driven, personalized client outreach. Unify online and offline inventory data to optimize stock levels and in-store labor. Our retail solution combines customer data and purchase history to create unique, effective customer engagement.',
-    imagePlaceholder: '/path/to/retail-image.jpg', // Replace with actual image path
+    name: "HEALTHCARE",
+    description: "Streamline patient onboarding, automate insurance verification, and manage complex care coordination workflows with AI agents that understand HIPAA compliance and healthcare protocols."
   },
   {
-    name: '02. INDUSTRIAL GOODS',
-    description:
-      'Automate your supply chain, from order processing to inventory management. Our agents handle complex logistics, predict demand, and optimize routes, reducing operational costs and improving delivery times.',
-    imagePlaceholder: '/path/to/industrial-image.jpg', // Replace with actual image path
+    name: "FINANCIAL SERVICES", 
+    description: "Automate KYC processes, manage loan applications, and handle customer service inquiries with AI agents trained on financial regulations and compliance requirements."
   },
   {
-    name: '03. HEALTHCARE',
-    description:
-      "Streamline patient intake, appointment scheduling, and billing. Our HIPAA-compliant agents reduce administrative burden, minimize errors, and allow your staff to focus on patient care.",
-    imagePlaceholder: '/path/to/healthcare-image.jpg', // Replace with actual image path
+    name: "MANUFACTURING",
+    description: "Optimize supply chain management, automate quality control processes, and coordinate production schedules with AI agents that understand manufacturing workflows and safety protocols."
   },
-];
+  {
+    name: "RETAIL & E-COMMERCE",
+    description: "Manage inventory, process orders, handle customer inquiries, and coordinate fulfillment with AI agents that understand retail operations and customer service best practices."
+  },
+]
 
 export function IndustrySection() {
   const [selectedIndustry, setSelectedIndustry] = useState(industries[0]);
 
   return (
-    <div className="border-t border-b border-gray-200" onMouseLeave={() => setSelectedIndustry(industries[0])}>
-      <div className="grid grid-cols-1 md:grid-cols-3">
+    <div className="border-t border-b border-gray-200">
+      {/* Desktop Layout */}
+      <div className="hidden md:grid md:grid-cols-3">
         {/* Left Column: Industry List */}
         <div className="md:col-span-1 border-r border-gray-200">
           <ul>
@@ -66,6 +65,36 @@ export function IndustrySection() {
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Mobile Layout */}
+      <div className="md:hidden">
+        {industries.map((industry, index) => (
+          <div key={industry.name} className="border-b border-gray-200 last:border-b-0">
+            <button
+              className={`w-full p-4 text-left cursor-pointer transition-colors ${
+                selectedIndustry.name === industry.name
+                  ? 'text-black bg-gray-50'
+                  : 'text-gray-600'
+              }`}
+              onClick={() => setSelectedIndustry(selectedIndustry.name === industry.name ? industries[0] : industry)}
+            >
+              <h3 className="font-semibold text-lg tracking-wider">{industry.name}</h3>
+              {selectedIndustry.name === industry.name && (
+                <div className="mt-4 pt-4 border-t border-gray-200">
+                  {/* Image Placeholder */}
+                  <div className="w-full h-48 bg-gray-50 border-2 border-dashed border-gray-300 flex items-center justify-center mb-4">
+                    <span className="text-gray-400">Image Placeholder</span>
+                  </div>
+                  {/* Description */}
+                  <p className="text-base leading-relaxed text-gray-700">
+                    {industry.description}
+                  </p>
+                </div>
+              )}
+            </button>
+          </div>
+        ))}
       </div>
     </div>
   );
