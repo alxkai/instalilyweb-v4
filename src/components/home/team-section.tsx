@@ -4,7 +4,6 @@ import Image from "next/image"
 import { urlForImage } from "@/lib/sanity"
 import { useEffect, useState } from "react"
 
-// Types to be moved to a types file later
 interface ProfileLogoType {
   name: string
   url?: string
@@ -16,7 +15,11 @@ interface ProfileType {
   name: string
   position: string
   description: string
-  img: any
+  img: {
+    asset: {
+      _ref: string
+    }
+  }
   role: string
   order: number
 }
@@ -37,8 +40,8 @@ const LogoSection = ({ profileId, profileName }: LogoSectionProps) => {
   useEffect(() => {
     if (typeof window === 'undefined') return
 
-    if (!(window as any).profileLogosPromise) {
-      (window as any).profileLogosPromise = fetch('/api/profile-logos')
+    if (!window.profileLogosPromise) {
+      window.profileLogosPromise = fetch('/api/profile-logos')
         .then(response => {
           if (!response.ok) throw new Error(`Failed to fetch logos: ${response.status}`)
           return response.json()
@@ -49,13 +52,13 @@ const LogoSection = ({ profileId, profileName }: LogoSectionProps) => {
         })
     }
 
-    (window as any).profileLogosPromise
+    window.profileLogosPromise
       .then((allLogos: Record<string, ProfileLogoType[]>) => {
         const profileLogos = allLogos[profileId] || []
         setLogos(profileLogos)
         setLoading(false)
       })
-      .catch((err: any) => {
+      .catch((err: Error) => {
         console.error(`Error processing logos for ${profileName} (ID: ${profileId}):`, err)
         setLoading(false)
       })

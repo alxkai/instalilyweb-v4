@@ -8,7 +8,7 @@ export function CTASection() {
           Ready to Build Your AI Workforce?
         </h2>
         <p className="text-lg md:text-xl mb-12 opacity-90 leading-relaxed">
-          Stop dwelling on the limits of work — build it. Let's discuss your specific challenges so we can deploy InstaWorkers™ that deliver immediate value.
+          Stop dwelling on the limits of work — build it. Let&apos;s discuss your specific challenges so we can deploy InstaWorkers™ that deliver immediate value.
         </p>
         <div className="flex flex-col md:flex-row gap-4 justify-center">
           <Link

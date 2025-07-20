@@ -2,13 +2,12 @@
 
 import Image from "next/image"
 import { Footer } from "@/components/layout/footer"
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import { X } from 'lucide-react';
 import { IndustrySection } from '@/components/home/industry-section';
 import { FeaturesSection } from '@/components/home/features-section';
 import { TestimonialsSection } from '@/components/home/testimonials-section';
 import { FullWidthCTA } from '@/components/layout/full-width-cta';
-import Link from "next/link";
 import { Nav } from '@/components/layout/nav';
 
 export default function Home() {
@@ -306,7 +305,7 @@ export default function Home() {
             </div>
 
             <div className="font-normal text-[#000000] text-[36px] text-left mb-12 max-w-[1339px]">
-              <p className="leading-[1.3]">Generic AI doesn't understand your business. Our InstaWorkers™ are equipped with deep domain knowledge to solve your most critical challenges.</p>
+              <p className="leading-[1.3]">Generic AI doesn&apos;t understand your business. Our InstaWorkers™ are equipped with deep domain knowledge to solve your most critical challenges.</p>
       </div>
 
             <IndustrySection />
@@ -321,7 +320,7 @@ export default function Home() {
             <div className="py-24 px-4">
         <div className="max-w-[1340px] mx-auto">
           <div className="font-normal text-[#000000] text-[36px] text-left mb-12">
-            <p className="leading-normal">Fueling our innovation with the support of the world's top technology programs.</p>
+            <p className="leading-normal">Fueling our innovation with the support of the world&apos;s top technology programs.</p>
           </div>
 
                 <div className="flex flex-wrap items-center justify-between w-full">

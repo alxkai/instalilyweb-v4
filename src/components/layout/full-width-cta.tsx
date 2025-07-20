@@ -8,7 +8,7 @@ export function FullWidthCTA() {
           Ready to Build Your AI Workforce?
         </h2>
         <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-          Stop waiting for the future of work — build it. Let's discuss your
+          Stop waiting for the future of work — build it. Let&apos;s discuss your
           specific challenges and design a deployment plan that delivers
           immediate, measurable ROI.
         </p>

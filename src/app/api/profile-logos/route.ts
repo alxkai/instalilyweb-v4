@@ -1,6 +1,17 @@
 import { NextResponse } from 'next/server'
 import { client } from '@/lib/sanity'
 
+interface ProfileLogo {
+  name: string
+  img: string
+  width: number
+}
+
+interface Profile {
+  _id: string
+  logos: ProfileLogo[]
+}
+
 export async function GET() {
   try {
     const query = `*[_type == "profile"] {
@@ -14,8 +25,8 @@ export async function GET() {
     
     const profiles = await client.fetch(query)
     
-    const profileLogos: Record<string, any[]> = {}
-    profiles.forEach((profile: any) => {
+    const profileLogos: Record<string, ProfileLogo[]> = {}
+    profiles.forEach((profile: Profile) => {
       if (profile.logos && profile.logos.length > 0) {
         profileLogos[profile._id] = profile.logos
       }

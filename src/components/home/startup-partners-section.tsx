@@ -4,7 +4,7 @@ export function StartupPartnersSection() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center">
           <p className="text-gray-500 text-xs uppercase tracking-[0.2em] mb-8">
-            Pushing new innovation with the support of the world's top technology programs
+            Pushing new innovation with the support of the world&apos;s top technology programs
           </p>
           
           <div className="flex justify-center items-center gap-12">
