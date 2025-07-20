@@ -35,7 +35,7 @@ export default function TermsPage() {
               <h2 className="text-2xl font-semibold mt-8 mb-4">2. Restrictions and Responsibilities</h2>
               <p>You agree not to:</p>
               <ul className="list-disc pl-6 mb-6">
-                <li>Reverse engineer, decompile, disassemble, or otherwise attempt to discover the source code, object code, or underlying structure of the Services or any related software, documentation, or data ("Software").</li>
+                <li>Access, copy, or modify any part of the Services or related software, documentation, or data (&quot;Software&quot;).</li>
                 <li>Modify, translate, or create derivative works based on the Services or Software.</li>
                 <li>Use the Services or Software for timesharing or service bureau purposes or otherwise for the benefit of a third party.</li>
                 <li>Remove any proprietary notices or labels.</li>

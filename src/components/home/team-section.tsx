@@ -3,7 +3,6 @@
 import Image from "next/image"
 import { urlForImage } from "@/lib/sanity"
 import { useEffect, useState } from "react"
-import { AnimatedSectionWrapper } from "@/components/layout/animated-section-wrapper"
 
 interface ProfileLogoType {
   name: string
@@ -16,7 +15,11 @@ interface ProfileType {
   name: string
   position: string
   description: string
-  img: any
+  img: {
+    asset: {
+      _ref: string
+    }
+  }
   role: string
   order: number
 }

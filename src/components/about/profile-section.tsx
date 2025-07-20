@@ -14,7 +14,11 @@ interface ProfileType {
   name: string
   position: string
   description: string
-  img: any
+  img: {
+    asset: {
+      _ref: string
+    }
+  }
 }
 
 interface LogoSectionProps {
@@ -105,20 +109,13 @@ const LogoSection = ({ profileId, profileName }: LogoSectionProps) => {
         
         return (
           <div className="mr-2 my-auto select-none" key={index}>
-            <img
+            <Image
               src={logo.url}
               alt={logo.name || `Logo ${index + 1}`}
               width={logo.width || 100}
               height={logo.width || 100}
               className="object-contain select-none"
               draggable={false}
-              onError={(e) => {
-                console.error(`Error loading logo image: ${logo.url}`);
-                e.currentTarget.style.background = '#f3f4f6';
-                e.currentTarget.style.width = `${logo.width}px`;
-                e.currentTarget.style.height = `${logo.width}px`;
-                e.currentTarget.alt = '';
-              }}
             />
           </div>
         )

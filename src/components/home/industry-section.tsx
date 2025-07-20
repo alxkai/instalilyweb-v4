@@ -73,7 +73,7 @@ export function IndustrySection() {
 
       {/* Mobile Layout */}
       <div className="md:hidden">
-        {industries.map((industry, index) => {
+        {industries.map((industry) => {
           const isOpen = selectedIndustry.name === industry.name;
           return (
             <div key={industry.name} className="border-b border-gray-200 last:border-b-0">

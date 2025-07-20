@@ -20,22 +20,11 @@ interface PostImage {
   };
 }
 
-interface Post {
-  name: string;
-  description: string;
-  content?: unknown[];
-  images?: PostImage[];
-  externalUrl?: string;
-  thumbnail?: PostImage;
-  createdAt?: string;
-  videoUrl?: string;
-}
-
 export async function generateStaticParams() {
   const posts = await getPosts();
   return posts
-    .filter((post: any) => post.slug && post.slug.current)
-    .map((post: any) => ({
+    .filter((post: { slug?: { current?: string } }) => post.slug && post.slug.current)
+    .map((post: { slug: { current: string } }) => ({
       slug: post.slug.current,
     }));
 }

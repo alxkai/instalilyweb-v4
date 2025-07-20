@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { X, Check } from 'lucide-react';
 
 export function MobileComparison() {

@@ -18,7 +18,11 @@ interface ProfileType {
   name: string
   position: string
   description: string
-  img: any
+  img: {
+    asset: {
+      _ref: string
+    }
+  }
   role: string
   order: number
 }
@@ -34,7 +38,7 @@ export function HomePageClient({ profiles }: HomePageClientProps) {
     <>
     <main className="relative bg-[#fdfff7] w-full overflow-clip">
       {/* Top Banner */}
-      <div 
+      {/* <div 
         className={`hidden sm:block bg-[#fdfff7] w-full overflow-hidden transition-all duration-500 ease-in-out ${
           isAnnouncementVisible ? 'h-10 opacity-100' : 'h-0 opacity-0'
         }`}
@@ -51,17 +55,17 @@ export function HomePageClient({ profiles }: HomePageClientProps) {
             </button>
           </div>
         )}
-      </div>
+      </div> */}
 
       {/* Sticky Navigation */}
       <div className="sticky top-0 z-[100] w-full">
-        <div className="w-full max-w-[1340px] mx-auto sm:pt-4">
+        <div className="w-full max-w-[1340px] mx-auto pt-4">
           <Nav />
         </div>
       </div>
 
       {/* Hero Section */}
-        <div className="relative h-screen w-full overflow-hidden -mt-[74px]">
+        <div className="relative h-screen w-full overflow-hidden -mt-[90px]">
         {/* Hero Background */}
         <video
           className="absolute top-0 left-0 w-full h-full object-cover"

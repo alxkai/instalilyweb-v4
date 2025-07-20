@@ -4,6 +4,7 @@ import { urlForImage } from "@/lib/sanity";
 import { PostType } from "@/lib/types";
 import { FC } from "react";
 import { Card } from "@/components/ui/card";
+import Image from "next/image";
 
 interface SubstackArticleCardProps {
   name: string;
@@ -17,7 +18,6 @@ interface SubstackArticleCardProps {
 
 const SubstackArticleCard: FC<SubstackArticleCardProps> = ({
   name,
-  description,
   externalUrl,
   thumbnail,
   slug,
@@ -38,10 +38,11 @@ const SubstackArticleCard: FC<SubstackArticleCardProps> = ({
     <Card className="group cursor-pointer hover:shadow-lg transition-shadow duration-200" onClick={handleClick}>
       <div className="aspect-video relative overflow-hidden">
         {imageUrl ? (
-          <img 
+          <Image 
             src={imageUrl} 
             alt={name}
-            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200"
+            fill
+            className="object-cover group-hover:scale-105 transition-transform duration-200"
           />
         ) : (
           <div className="w-full h-full bg-gray-200 flex items-center justify-center">
@@ -84,7 +85,7 @@ export default function SubstackArticleListSection({ articleList }: SubstackArti
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
       {articleList
         .filter((article) => !article.hidden)
-        .map((article, index) => (
+        .map((article) => (
           <SubstackArticleCard {...article} key={article._id || article.slug.current} />
         ))}
     </div>
