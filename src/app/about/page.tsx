@@ -21,9 +21,15 @@ interface ProfileType {
   name: string
   position: string
   description: string
-  img: any
+  img: {
+    asset: {
+      _ref: string
+    }
+  }
   role: string
-  logos?: any[]
+  logos?: {
+    _ref: string
+  }[]
   order: number
 }
 

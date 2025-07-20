@@ -27,7 +27,7 @@ export function MobileComparison() {
 
   return (
     <div className="md:hidden space-y-8">
-      <h2 className="text-3xl font-semibold text-black text-center">The Old Way vs. The InstaLILY Way</h2>
+      <h2 className="font-semibold text-[24px] sm:text-[32px] md:text-[40px] lg:text-[48px] mb-12">The Old Way vs. The InstaLILY Way</h2>
       
       {comparisons.map((comparison) => (
         <div key={comparison.category} className="border border-gray-200 rounded-lg overflow-hidden">

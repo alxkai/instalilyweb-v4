@@ -27,10 +27,10 @@ export default function TermsPage() {
         <section className="bg-[#fdfff7] py-12 sm:py-16">
           <div className="max-w-4xl mx-auto px-4">
             <div className="prose prose-lg max-w-none">
-              <p className="mb-6">Welcome to InstaLILY! These Terms of Service ("Terms") govern your access to and use of our website and services (collectively, the "Services"). By accessing or using our Services, you agree to comply with and be bound by these Terms.</p>
+              <p className="mb-6">Welcome to InstaLILY! These Terms of Service (&quot;Terms&quot;) govern your access to and use of our website and services (collectively, the &quot;Services&quot;). By accessing or using our Services, you agree to comply with and be bound by these Terms.</p>
 
               <h2 className="text-2xl font-semibold mt-8 mb-4">1. SAAS Services and Support</h2>
-              <p>InstaLILY will use commercially reasonable efforts to provide you with our Services. Additional services may be agreed upon through order forms, exhibits, and statements of work, and such additional services will also be deemed as "Services" under these Terms. InstaLILY will provide reasonable technical support services as described in Exhibit A.</p>
+              <p>InstaLILY will use commercially reasonable efforts to provide you with our Services. Additional services may be agreed upon through order forms, exhibits, and statements of work, and such additional services will also be deemed as &quot;Services&quot; under these Terms. InstaLILY will provide reasonable technical support services as described in Exhibit A.</p>
 
               <h2 className="text-2xl font-semibold mt-8 mb-4">2. Restrictions and Responsibilities</h2>
               <p>You agree not to:</p>
@@ -45,7 +45,7 @@ export default function TermsPage() {
 
               <h2 className="text-2xl font-semibold mt-8 mb-4">3. Confidentiality and Proprietary Rights</h2>
               <p>Each party agrees to protect the other party&apos;s proprietary information with reasonable precautions and not to use or disclose such information except as necessary to perform under these Terms. Proprietary information includes non-public business, technical, or financial information.</p>
-              <p>You retain all rights to your data ("Customer Data"). InstaLILY retains all rights to the Services, Software, and related intellectual property ("Company IP"). We may use anonymized data derived from your Customer Data for marketing, analytics, statistical, or research purposes.</p>
+              <p>You retain all rights to your data (&quot;Customer Data&quot;). InstaLILY retains all rights to the Services, Software, and related intellectual property (&quot;Company IP&quot;). We may use anonymized data derived from your Customer Data for marketing, analytics, statistical, or research purposes.</p>
 
               <h2 className="text-2xl font-semibold mt-8 mb-4">4. Payment of Fees</h2>
               <p>You agree to pay all applicable fees for the Services as described in any order form or statement of work. If your use of the Services exceeds the agreed capacity or otherwise incurs additional fees, you will be billed accordingly. InstaLILY reserves the right to change fees with 30 days&apos; notice.</p>
@@ -54,7 +54,7 @@ export default function TermsPage() {
               <p>You represent, warrant, and covenant that you have the authority to enter into and comply with these Terms. You will not breach any agreements, violate any laws, or require third-party consents that would prevent you from fulfilling your obligations under these Terms.</p>
 
               <h2 className="text-2xl font-semibold mt-8 mb-4">6. Warranty and Disclaimer</h2>
-              <p>InstaLILY will use commercially reasonable efforts to maintain the Services and minimize errors and interruptions. However, the Services are provided "as is," and we disclaim all warranties, including implied warranties of merchantability, fitness for a particular purpose, and non-infringement.</p>
+              <p>InstaLILY will use commercially reasonable efforts to maintain the Services and minimize errors and interruptions. However, the Services are provided &quot;as is,&quot; and we disclaim all warranties, including implied warranties of merchantability, fitness for a particular purpose, and non-infringement.</p>
 
               <h2 className="text-2xl font-semibold mt-8 mb-4">7. Limitation of Liability</h2>
               <p>In no event will InstaLILY be liable for indirect, special, punitive, or consequential damages. Our aggregate liability for any claims related to the Services will not exceed the fees paid by you in the 12 months preceding the claim.</p>

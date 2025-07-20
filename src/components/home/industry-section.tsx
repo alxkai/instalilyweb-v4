@@ -24,6 +24,10 @@ const industries = [
 export function IndustrySection() {
   const [selectedIndustry, setSelectedIndustry] = useState(industries[0]);
 
+  const toggleIndustry = (industry: typeof industries[0]) => {
+    setSelectedIndustry(selectedIndustry.name === industry.name ? industries[0] : industry);
+  };
+
   return (
     <div className="border-t border-b border-gray-200">
       {/* Desktop Layout */}
@@ -69,32 +73,43 @@ export function IndustrySection() {
 
       {/* Mobile Layout */}
       <div className="md:hidden">
-        {industries.map((industry, index) => (
-          <div key={industry.name} className="border-b border-gray-200 last:border-b-0">
-            <button
-              className={`w-full p-4 text-left cursor-pointer transition-colors ${
-                selectedIndustry.name === industry.name
-                  ? 'text-black bg-gray-50'
-                  : 'text-gray-600'
-              }`}
-              onClick={() => setSelectedIndustry(selectedIndustry.name === industry.name ? industries[0] : industry)}
-            >
-              <h3 className="font-semibold text-lg tracking-wider">{industry.name}</h3>
-              {selectedIndustry.name === industry.name && (
-                <div className="mt-4 pt-4 border-t border-gray-200">
-                  {/* Image Placeholder */}
-                  <div className="w-full h-48 bg-gray-50 border-2 border-dashed border-gray-300 flex items-center justify-center mb-4">
-                    <span className="text-gray-400">Image Placeholder</span>
+        {industries.map((industry, index) => {
+          const isOpen = selectedIndustry.name === industry.name;
+          return (
+            <div key={industry.name} className="border-b border-gray-200 last:border-b-0">
+              <button
+                className={`w-full p-4 text-left cursor-pointer transition-all duration-300 ease-in-out ${
+                  isOpen
+                    ? 'text-black bg-gray-50'
+                    : 'text-gray-600'
+                }`}
+                onClick={() => toggleIndustry(industry)}
+              >
+                <h3 className="font-semibold text-lg tracking-wider">{industry.name}</h3>
+              </button>
+              <div
+                className={`overflow-hidden transition-all duration-500 ease-in-out ${
+                  isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                }`}
+              >
+                <div className={`p-4 pt-0 transform transition-transform duration-500 ease-in-out ${
+                  isOpen ? 'translate-y-0' : '-translate-y-4'
+                }`}>
+                  <div className="pt-4 border-t border-gray-200">
+                    {/* Image Placeholder */}
+                    <div className="w-full h-48 bg-gray-50 border-2 border-dashed border-gray-300 flex items-center justify-center mb-4">
+                      <span className="text-gray-400">Image Placeholder</span>
+                    </div>
+                    {/* Description */}
+                    <p className="text-base leading-relaxed text-gray-700">
+                      {industry.description}
+                    </p>
                   </div>
-                  {/* Description */}
-                  <p className="text-base leading-relaxed text-gray-700">
-                    {industry.description}
-                  </p>
                 </div>
-              )}
-            </button>
-          </div>
-        ))}
+              </div>
+            </div>
+          );
+        })}
       </div>
     </div>
   );

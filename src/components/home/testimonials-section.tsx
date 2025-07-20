@@ -38,7 +38,7 @@ export function TestimonialsSection() {
   return (
     <div className="py-12 px-4">
       <div className="max-w-[1340px] mx-auto">
-        <h2 className="font-semibold text-3xl md:text-5xl text-black text-left mb-12">
+        <h2 className="font-semibold text-[24px] sm:text-[32px] md:text-[40px] lg:text-[48px] text-black text-left mb-12">
           What our partners say
         </h2>
 

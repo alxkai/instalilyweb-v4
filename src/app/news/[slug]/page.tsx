@@ -1,18 +1,34 @@
 import React from 'react'
 import { Metadata } from 'next'
-import { notFound, redirect } from 'next/navigation'
+import { notFound } from 'next/navigation'
 import { PortableText, PortableTextComponents } from '@portabletext/react'
 import Image from 'next/image'
 import { getPost, getPosts } from '@/lib/sanity'
 import { urlForImage } from '@/lib/sanity'
 import { Nav } from '@/components/layout/nav'
 import { Footer } from '@/components/layout/footer'
-import { CTASection } from '@/components/layout/cta-section'
 
 interface NewsArticlePageProps {
   params: Promise<{
     slug: string;
   }>;
+}
+
+interface PostImage {
+  asset: {
+    _ref: string;
+  };
+}
+
+interface Post {
+  name: string;
+  description: string;
+  content?: unknown[];
+  images?: PostImage[];
+  externalUrl?: string;
+  thumbnail?: PostImage;
+  createdAt?: string;
+  videoUrl?: string;
 }
 
 export async function generateStaticParams() {

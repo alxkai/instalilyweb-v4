@@ -14,6 +14,17 @@ interface ProfileWithLogos {
   logos?: { _ref: string }[];
 }
 
+interface LogoDocument {
+  _id: string;
+  name: string;
+  img: {
+    asset: {
+      _ref: string;
+    };
+  };
+  width: number;
+}
+
 export async function GET() {
   try {
     const profileQuery = `*[_type == "profile"] {
@@ -35,7 +46,7 @@ export async function GET() {
       }
     });
     
-    let logoDocuments: Record<string, any> = {};
+    let logoDocuments: Record<string, LogoDocument> = {};
     if (logoRefs.size > 0) {
       const logoRefs_array = Array.from(logoRefs);
       const logoQuery = `*[_type == "profileLogo" && _id in $refs] {
@@ -45,9 +56,9 @@ export async function GET() {
         width
       }`;
       
-      const logoResults = await client.fetch(logoQuery, { refs: logoRefs_array });
+      const logoResults: LogoDocument[] = await client.fetch(logoQuery, { refs: logoRefs_array });
       
-      logoDocuments = logoResults.reduce((acc: Record<string, any>, logo: any) => {
+      logoDocuments = logoResults.reduce((acc: Record<string, LogoDocument>, logo: LogoDocument) => {
         if (logo._id) {
           acc[logo._id] = logo;
         }
