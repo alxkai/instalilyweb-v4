@@ -1,4 +1,5 @@
 import { X, Check } from 'lucide-react';
+import { AnimatedSectionWrapper } from '@/components/layout/animated-section-wrapper';
 
 export function MobileComparison() {
   const comparisons = [
@@ -28,28 +29,30 @@ export function MobileComparison() {
     <div className="md:hidden space-y-8">
       <h2 className="font-semibold text-[24px] sm:text-[32px] md:text-[40px] lg:text-[48px] mb-12">The Old Way vs. The InstaLILY Way</h2>
       
-      {comparisons.map((comparison) => (
-        <div key={comparison.category} className="border border-gray-200 rounded-lg overflow-hidden">
-          <div className="bg-gray-50 p-4 border-b">
-            <h3 className="text-xl font-semibold">{comparison.category}</h3>
-          </div>
-          <div className="p-6">
-            <div className="mb-6">
-              <h4 className="font-semibold text-lg mb-2 flex items-center">
-                <X className="w-5 h-5 text-black mr-2" />
-                The Old Way
-              </h4>
-              <p className="text-gray-700">{comparison.oldWay}</p>
+      {comparisons.map((comparison, index) => (
+        <AnimatedSectionWrapper key={comparison.category} delay={index * 150}>
+          <div className="border border-gray-200 rounded-lg overflow-hidden">
+            <div className="bg-gradient-to-r from-[#181818] to-[#2a2a2a] p-4 border-b">
+              <h3 className="text-xl font-semibold text-white">{comparison.category}</h3>
             </div>
-            <div>
-              <h4 className="font-semibold text-lg mb-2 flex items-center">
-                <Check className="w-5 h-5 text-black mr-2" />
-                The InstaLILY Way
-              </h4>
-              <p className="text-gray-700">{comparison.newWay}</p>
+            <div className="p-6">
+              <div className="mb-6">
+                <h4 className="font-semibold text-lg mb-2 flex items-center">
+                  <X className="w-5 h-5 text-black mr-2" />
+                  The Old Way
+                </h4>
+                <p className="text-gray-700">{comparison.oldWay}</p>
+              </div>
+              <div>
+                <h4 className="font-semibold text-lg mb-2 flex items-center">
+                  <Check className="w-5 h-5 text-black mr-2" />
+                  The InstaLILY Way
+                </h4>
+                <p className="text-gray-700">{comparison.newWay}</p>
+              </div>
             </div>
           </div>
-        </div>
+        </AnimatedSectionWrapper>
       ))}
     </div>
   );

@@ -65,7 +65,7 @@ export function HomePageClient({ profiles }: HomePageClientProps) {
       </div>
 
       {/* Hero Section */}
-        <div className="relative h-screen w-full overflow-hidden -mt-[90px]">
+        <div className="relative h-screen w-full overflow-hidden -mt-[72px] md:-mt-[80px]">
         {/* Hero Background */}
         <video
           className="absolute top-0 left-0 w-full h-full object-cover"
@@ -137,7 +137,7 @@ export function HomePageClient({ profiles }: HomePageClientProps) {
       </div> */}
 
       {/* Startup Partners Section with Dark Background */}
-      <div className="bg-[#181818] py-12 sm:py-16 md:py-24 px-4">
+      <div className="bg-[#181818] py-0 sm:py-16 md:py-24 px-4">
         <div className="max-w-[1340px] mx-auto">
           <AnimatedSectionWrapper>
             <div className="font-normal text-[#fdfff7] text-[18px] sm:text-[24px] md:text-[30px] lg:text-[36px] text-left mb-8 sm:mb-12">
@@ -205,8 +205,9 @@ export function HomePageClient({ profiles }: HomePageClientProps) {
         <div className="max-w-[1340px] mx-auto">
           
           {/* Desktop Table */}
-          <div className="hidden md:block">
-            <div className="border border-gray-200 overflow-hidden">
+          <AnimatedSectionWrapper>
+            <div className="hidden md:block">
+              <div className="border border-gray-200 overflow-hidden">
               {/* Table Header */}
               <div className="grid border-b border-gray-200" style={{ gridTemplateColumns: '300px 1fr 1fr' }}>
                 <div className="p-8 text-left border-r border-gray-200">
@@ -357,6 +358,7 @@ export function HomePageClient({ profiles }: HomePageClientProps) {
               </div>
             </div>
           </div>
+          </AnimatedSectionWrapper>
           <MobileComparison />
         </div>
       </div>

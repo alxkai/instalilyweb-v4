@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { AnimatedSectionWrapper } from '@/components/layout/animated-section-wrapper';
 
 const testimonials = [
   {
@@ -118,8 +119,9 @@ export function TestimonialsSection() {
 
         {/* Mobile Layout */}
         <div className="md:hidden space-y-8">
-          {testimonials.map((testimonial) => (
-            <div key={testimonial.id} className="border border-gray-200 rounded-lg p-6">
+          {testimonials.map((testimonial, index) => (
+            <AnimatedSectionWrapper key={testimonial.id} delay={index * 150}>
+              <div className="border border-gray-200 rounded-lg p-6">
               <div className="w-full h-48 bg-gray-50 border-2 border-dashed border-gray-300 flex items-center justify-center mb-4">
                 <span className="text-gray-400">Image Placeholder</span>
               </div>
@@ -132,7 +134,8 @@ export function TestimonialsSection() {
                 <p className="text-sm text-gray-600">{testimonial.title}</p>
                 <p className="text-sm text-gray-600">{testimonial.company}</p>
               </cite>
-            </div>
+              </div>
+            </AnimatedSectionWrapper>
           ))}
         </div>
       </div>

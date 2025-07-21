@@ -80,7 +80,7 @@ export function IndustrySection() {
               <button
                 className={`w-full p-4 text-left cursor-pointer transition-all duration-300 ease-in-out ${
                   isOpen
-                    ? 'text-black bg-gray-50'
+                    ? 'text-black'
                     : 'text-gray-600'
                 }`}
                 onClick={() => toggleIndustry(industry)}
