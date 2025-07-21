@@ -7,9 +7,28 @@ import { ProfileSection } from "@/components/about/profile-section"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "About Us | InstaLILY AI",
+  title: "About InstaLILY AI | Founders, Mission, and Team",
+  description: "Learn about InstaLILY AI's mission to revolutionize enterprise workflows with autonomous AI agents. Meet our team and discover our vision for the future of B2B automation.",
+  keywords: [
+    "InstaLILY team",
+    "AI automation company",
+    "enterprise AI founders",
+    "B2B workflow automation",
+    "AI agent company",
+    "autonomous AI agents"
+  ],
   openGraph: {
-    title: "About Us | InstaLILY AI"
+    title: "About InstaLILY AI | Founders, Mission, and Team",
+    description: "Learn about InstaLILY AI's mission to revolutionize enterprise workflows with autonomous AI agents.",
+    type: "website"
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About InstaLILY AI | Founders, Mission, and Team",
+    description: "Learn about InstaLILY AI's mission to revolutionize enterprise workflows with autonomous AI agents."
+  },
+  alternates: {
+    canonical: "https://instalily.ai/about"
   }
 };
 

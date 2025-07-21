@@ -7,6 +7,9 @@ import { getPost, getPosts } from '@/lib/sanity'
 import { urlForImage } from '@/lib/sanity'
 import { Nav } from '@/components/layout/nav'
 import { Footer } from '@/components/layout/footer'
+import { Breadcrumbs } from '@/components/ui/breadcrumbs'
+import { RelatedPosts } from '@/components/layout/related-posts'
+import { AboutHero } from '@/components/layout/about-hero'
 
 interface NewsArticlePageProps {
   params: Promise<{
@@ -39,13 +42,44 @@ export async function generateMetadata({ params }: NewsArticlePageProps): Promis
     };
   }
 
+  const imageUrl = post.thumbnail ? urlForImage(post.thumbnail) : null;
+  const publishDate = post.createdAt ? new Date(post.createdAt).toISOString() : undefined;
+
   return {
-    title: `${post.name} | InstaLILY AI`,
+    title: post.name,
     description: post.description,
     openGraph: {
-      title: `${post.name} | InstaLILY AI`,
+      title: post.name,
       description: post.description,
+      type: 'article',
+      publishedTime: publishDate,
+      authors: ['InstaLILY AI Team'],
+      images: imageUrl ? [
+        {
+          url: imageUrl,
+          width: 1200,
+          height: 630,
+          alt: post.name
+        }
+      ] : undefined,
     },
+    twitter: {
+      card: 'summary_large_image',
+      title: post.name,
+      description: post.description,
+      images: imageUrl ? [imageUrl] : undefined,
+    },
+    alternates: {
+      canonical: `https://instalily.ai/news/${slug}`
+    },
+    keywords: [
+      'InstaLILY AI',
+      'AI automation',
+      'enterprise AI',
+      'B2B workflows',
+      'news',
+      'announcements'
+    ],
   };
 }
 
@@ -74,15 +108,12 @@ const createPortableTextComponents = (images: any[] = []): PortableTextComponent
     h2: ({ children }) => <h2 className="text-3xl font-bold mt-8 mb-4">{children}</h2>,
     h3: ({ children }) => <h3 className="text-2xl font-bold mt-8 mb-4">{children}</h3>,
     normal: ({ children }) => {
-      // Check if any child contains image placeholders
       const processedChildren = React.Children.map(children, (child) => {
         if (typeof child === 'string') {
-          // Look for image placeholders like <IMAGE_1>, <IMAGE_2>, etc.
           const imageRegex = /<IMAGE_(\d+)>/g;
           const parts = child.split(imageRegex);
           
           return parts.map((part, index) => {
-            // Check if this part is a number (from the regex capture group)
             const imageNumber = parseInt(part);
             if (!isNaN(imageNumber) && images && images[imageNumber - 1]) {
               const imageUrl = urlForImage(images[imageNumber - 1]);
@@ -100,7 +131,6 @@ const createPortableTextComponents = (images: any[] = []): PortableTextComponent
                 );
               }
             }
-            // Return text parts as-is
             return part;
           });
         }
@@ -123,15 +153,11 @@ const createPortableTextComponents = (images: any[] = []): PortableTextComponent
 export default async function NewsArticlePage({ params }: NewsArticlePageProps) {
   const { slug } = await params;
   const post = await getPost(slug);
+  const allPosts = await getPosts();
 
   if (!post) {
     notFound();
   }
-
-  // Debug logging to understand the post structure
-  console.log('Post data:', JSON.stringify(post, null, 2));
-  console.log('Post images:', post.images);
-  console.log('Post content sample:', post.content?.slice(0, 3));
 
   if (post.externalUrl) {
     return (
@@ -164,8 +190,13 @@ export default async function NewsArticlePage({ params }: NewsArticlePageProps) 
     day: 'numeric'
   }) : null;
 
-  // Create components with access to post images
   const portableTextComponents = createPortableTextComponents(post.images || []);
+
+  const breadcrumbItems = [
+    { label: 'Home', href: '/' },
+    { label: 'News', href: '/news' },
+    { label: post.name }
+  ];
 
   return (
     <div className="min-h-screen bg-[#fdfff7]">
@@ -175,8 +206,15 @@ export default async function NewsArticlePage({ params }: NewsArticlePageProps) 
         </div>
       </div>
       
-      <main className="-mt-[74px] pt-[74px]">
-        <article className="max-w-4xl mx-auto px-4 py-16">
+      <main className="-mt-[90px]">
+        <AboutHero
+          title="News & Announcements"
+          description="The latest updates, articles, and press from the InstaLILY AI team."
+        />
+        <section className="bg-[#fdfff7] py-12 sm:py-16">
+          <article className="max-w-4xl mx-auto px-4">
+            <Breadcrumbs items={breadcrumbItems} className="mb-8" />
+          
           <header className="mb-8">
             <h1 className="text-4xl font-bold mb-4 leading-tight">{post.name}</h1>
             
@@ -220,7 +258,14 @@ export default async function NewsArticlePage({ params }: NewsArticlePageProps) 
               </div>
             </div>
           )}
-        </article>
+
+          <RelatedPosts 
+            posts={allPosts} 
+            currentPostId={post._id || ''} 
+            maxPosts={3} 
+          />
+          </article>
+        </section>
       </main>
       <Footer />
     </div>

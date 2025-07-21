@@ -7,9 +7,27 @@ import { AboutHero } from "@/components/layout/about-hero";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "News & Announcements | InstaLILY AI",
+  title: "News & Announcements",
+  description: "The latest updates, articles, and press from the InstaLILY AI team. Stay informed about AI automation, enterprise workflows, and product announcements.",
+  keywords: [
+    "InstaLILY news",
+    "AI automation updates",
+    "enterprise AI announcements",
+    "B2B workflow news",
+    "AI agent updates"
+  ],
   openGraph: {
-    title: "News & Announcements | InstaLILY AI"
+    title: "News & Announcements | InstaLILY AI",
+    description: "The latest updates, articles, and press from the InstaLILY AI team. Stay informed about AI automation, enterprise workflows, and product announcements.",
+    type: "website"
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "News & Announcements | InstaLILY AI",
+    description: "The latest updates, articles, and press from the InstaLILY AI team."
+  },
+  alternates: {
+    canonical: "https://instalily.ai/news"
   }
 };
 
