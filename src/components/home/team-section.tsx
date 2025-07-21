@@ -103,7 +103,7 @@ declare global {
 
 export function TeamSection({ profiles }: TeamSectionProps) {
   return (
-    <section className="bg-white py-12">
+    <section className="py-12">
       <div className="max-w-[1340px] mx-auto px-4">
         <div className="text-left mb-12">
           <p className="mb-0 text-[#999999] text-[18px] sm:text-[24px] md:text-[30px] lg:text-[36px]">Meet the team building the future of AI agents.</p>

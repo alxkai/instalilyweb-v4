@@ -10,6 +10,7 @@ import { Footer } from '@/components/layout/footer'
 import { Breadcrumbs } from '@/components/ui/breadcrumbs'
 import { RelatedPosts } from '@/components/layout/related-posts'
 import { AboutHero } from '@/components/layout/about-hero'
+import { SocialShare } from '@/components/ui/social-share'
 
 interface NewsArticlePageProps {
   params: Promise<{
@@ -223,6 +224,13 @@ export default async function NewsArticlePage({ params }: NewsArticlePageProps) 
             )}
             
             <p className="text-xl text-gray-600 mb-8 leading-relaxed">{post.description}</p>
+            
+            <SocialShare 
+              url={`https://instalily.ai/news/${slug}`}
+              title={post.name}
+              description={post.description}
+              className="mb-8"
+            />
             
             {thumbnailUrl && (
               <div className="mb-8">

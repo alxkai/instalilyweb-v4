@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "InstaLILY AI - Autonomous AI Agents for Enterprise"
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "InstaLILY AI | Autonomous AI Agents that work for your enterprise",
     description: "Enterprise AI Automation | AI Agents for Sales & Ops | Instalily deploys AI agents that plug into Salesforce, SAP, and ERPs to automate sales, service, and back-office workflows.",
-    images: ["/og-image.jpg"],
+    images: ["/og-image.png"],
     creator: "@InstalilyAI"
   },
   robots: {

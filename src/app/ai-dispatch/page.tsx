@@ -75,7 +75,7 @@ export default async function AIDispatchPage() {
       <main className="-mt-[90px]">
         <AboutHero
           title="The AI Dispatch"
-          description="Fresh insights on artificial intelligence, automation, and the future of work from the InstaLILY team."
+          description="Fresh insights on AI, automation, and the future of work from the InstaLILY team."
         />
         <section className="bg-[#fdfff7] py-12 sm:py-16">
           <div className="max-w-7xl mx-auto px-4">
