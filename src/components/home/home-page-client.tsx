@@ -140,7 +140,7 @@ export function HomePageClient({ profiles }: HomePageClientProps) {
       <div className="bg-[#181818] py-12 sm:py-16 md:py-24 px-4">
         <div className="max-w-[1340px] mx-auto">
           <AnimatedSectionWrapper>
-            <div className="font-normal text-[#fdfff7] text-[18px] sm:text-[24px] md:text-[30px] lg:text-[36px] text-left mb-8 sm:mb-12">
+            <div className="font-normal subtitle-copy text-[#fdfff7] text-left mb-8 sm:mb-12">
               <p className="leading-normal">Fueling our innovation with the support of the world&apos;s top technology programs.</p>
             </div>
           </AnimatedSectionWrapper>
@@ -178,14 +178,14 @@ export function HomePageClient({ profiles }: HomePageClientProps) {
         <div className="max-w-[1340px] mx-auto">
           <AnimatedSectionWrapper>
             <div className="font-medium text-left mb-6 sm:mb-8">
-              <p className="mb-0 text-[#999999] text-[18px] sm:text-[24px] md:text-[30px] lg:text-[36px]">Legacy automation is broken.</p>
-              <p className="font-semibold text-[24px] sm:text-[32px] md:text-[40px] lg:text-[48px]">The future is an AI workforce.</p>
+              <p className="mb-0 text-[#999999] eyebrow-text">Legacy automation is broken.</p>
+              <p className="title-text">The future is an AI workforce.</p>
             </div>
           </AnimatedSectionWrapper>
 
           <AnimatedSectionWrapper delay={150}>
             <div className="font-normal text-left sm:text-justify max-w-[1339px]">
-              <p className="leading-[1.4] sm:leading-[normal] text-[18px] sm:text-[24px] md:text-[32px] lg:text-[40px]">
+              <p className="subtitle-copy">
                 <span className="text-[#999999]">Stop wrestling with rigid automation. </span>
                 <span>InstaLILY provides </span>
                 <span className="text-[#000000]">InstaWorkers™</span>
@@ -367,15 +367,15 @@ export function HomePageClient({ profiles }: HomePageClientProps) {
         <div className="py-12 sm:py-16 md:py-24 px-4">
           <div className="max-w-[1340px] mx-auto">
             <AnimatedSectionWrapper>
-              <div className="font-semibold text-[#000000] text-[24px] sm:text-[32px] md:text-[40px] lg:text-[48px] text-left mb-4 sm:mb-6">
-                <p className="mb-0 leading-[1.1]">Intelligent automation,</p>
-                <p className="leading-[1.1]">Built for your industry.</p>
+              <div className="title-text text-left mb-4 sm:mb-6">
+                <p className="mb-2">Intelligent automation,</p>
+                <p>Built for your industry.</p>
               </div>
             </AnimatedSectionWrapper>
 
             <AnimatedSectionWrapper delay={150}>
-              <div className="font-normal text-[16px] sm:text-[20px] md:text-[28px] lg:text-[36px] text-left mb-8 sm:mb-12 max-w-[1339px]">
-                <p className="leading-[1.3]">
+              <div className="font-normal subtitle-copy text-left mb-8 sm:mb-12 max-w-[1339px]">
+                <p>
                   <span className="text-[#999999]">Generic AI doesn&apos;t understand your business.</span>
                   <span className="text-[#000000]"> Our InstaWorkers™ are equipped with deep domain knowledge to solve your most critical challenges.</span>
                 </p>

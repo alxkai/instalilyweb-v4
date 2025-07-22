@@ -40,7 +40,7 @@ export function TestimonialsSection() {
   return (
     <div className="py-12 px-4">
       <div className="max-w-[1340px] mx-auto">
-        <h2 className="font-semibold text-[24px] sm:text-[32px] md:text-[40px] lg:text-[48px] text-black text-left mb-12">
+        <h2 className="title-text text-black text-left mb-12">
           What our partners say
         </h2>
 
@@ -101,7 +101,7 @@ export function TestimonialsSection() {
 
                   {/* Quote */}
                   <div className="flex flex-col justify-center">
-                    <blockquote className="text-2xl text-black mb-6 relative">
+                    <blockquote className="body-copy text-black mb-6 relative">
                       <span className="absolute -left-6 -top-2 text-6xl text-gray-200">“</span>
                       <span className="relative z-10">{selectedTestimonial.quote}</span>
                     </blockquote>
@@ -162,7 +162,7 @@ export function TestimonialsSection() {
                   </div>
                 )}
               </div>
-              <blockquote className="text-lg text-black mb-4 relative">
+              <blockquote className="body-copy text-black mb-4 relative">
                 <span className="absolute -left-4 -top-1 text-4xl text-gray-200">“</span>
                 <span className="relative z-10">{testimonial.quote}</span>
               </blockquote>

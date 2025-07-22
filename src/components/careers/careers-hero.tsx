@@ -25,7 +25,7 @@ export function CareersHero({ onButtonClick }: CareersHeroProps) {
           <h1 className="text-3xl lg:text-4xl font-bold mb-4 leading-tight">
             Be Part of Building the Future of AI Agents
           </h1>
-          <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+          <p className="body-copy text-gray-300 mb-8">
             Here, cutting-edge technology meets real-world impact. Together, we&apos;re redefining how businesses operate with innovation, intelligence, and speed.
           </p>
           <button 

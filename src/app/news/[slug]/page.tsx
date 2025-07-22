@@ -138,7 +138,7 @@ const createPortableTextComponents = (images: any[] = []): PortableTextComponent
         return child;
       });
 
-      return <p className="text-lg text-gray-700 mb-4">{processedChildren}</p>;
+      return <p className="body-copy text-gray-700 mb-4">{processedChildren}</p>;
     },
   },
   marks: {
@@ -223,7 +223,7 @@ export default async function NewsArticlePage({ params }: NewsArticlePageProps) 
               <p className="text-gray-500 mb-4">{publishDate}</p>
             )}
             
-            <p className="text-xl text-gray-600 mb-8 leading-relaxed">{post.description}</p>
+            <p className="body-copy text-gray-600 mb-8">{post.description}</p>
             
             <SocialShare 
               url={`https://instalily.ai/news/${slug}`}

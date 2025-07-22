@@ -31,7 +31,7 @@ export function FeaturesSection() {
 
   return (
     <div className="py-24 md:py-32 px-4">
-      <h2 className="font-semibold text-[24px] sm:text-[32px] md:text-[40px] lg:text-[48px] text-black mb-12">More than just automation.</h2>
+      <h2 className="title-text text-black mb-12">More than just automation.</h2>
       <div>
         {features.map((feature, index) => {
           const isOpen = openFeature === feature.title;
@@ -64,7 +64,7 @@ export function FeaturesSection() {
                     isOpen ? 'translate-y-0' : '-translate-y-4'
                   }`}>
                     <p
-                      className={`text-base md:text-2xl leading-relaxed transition-colors duration-300 ${
+                      className={`body-copy transition-colors duration-300 ${
                         isOpen ? 'text-gray-300' : 'text-gray-700'
                       }`}
                     >

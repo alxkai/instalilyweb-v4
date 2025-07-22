@@ -43,8 +43,8 @@ export function Values() {
     <section className="w-full bg-[#fdfff7]">
       <div className="max-w-7xl mx-auto px-4 py-16">
         <div className="max-w-3xl">
-          <h2 className="text-3xl font-semibold mb-6">Our Values</h2>
-          <div className="text-lg text-gray-600">
+          <h2 className="title-text mb-6">Our Values</h2>
+          <div className="subtitle-copy text-gray-600">
             <p>
               At InstaLILY, we&apos;re driven by three core principles—Customers, Culture, and Code
               —what we call The Three C&apos;s. These values shape everything we do, from the

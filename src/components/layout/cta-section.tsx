@@ -5,7 +5,7 @@ export function CTASection() {
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-8">
           Ready to Build Your AI Workforce?
         </h2>
-        <p className="text-lg md:text-xl mb-12 opacity-90 leading-relaxed">
+        <p className="body-copy mb-12 opacity-90">
           Stop dwelling on the limits of work — build it. Let&apos;s discuss your specific challenges so we can deploy InstaWorkers™ that deliver immediate value.
         </p>
         <div className="flex flex-col md:flex-row gap-4 justify-center">

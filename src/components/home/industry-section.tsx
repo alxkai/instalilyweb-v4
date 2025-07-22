@@ -63,7 +63,7 @@ export function IndustrySection() {
             </div>
             {/* Description */}
             <div>
-              <p className="text-xl leading-relaxed text-gray-700">
+              <p className="body-copy text-gray-700">
                 {selectedIndustry.description}
               </p>
             </div>
@@ -101,7 +101,7 @@ export function IndustrySection() {
                       <span className="text-gray-400">Image Placeholder</span>
                     </div>
                     {/* Description */}
-                    <p className="text-base leading-relaxed text-gray-700">
+                    <p className="body-copy text-gray-700">
                       {industry.description}
                     </p>
                   </div>

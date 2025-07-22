@@ -27,7 +27,7 @@ export function MobileComparison() {
 
   return (
     <div className="md:hidden space-y-8">
-      <h2 className="font-semibold text-[24px] sm:text-[32px] md:text-[40px] lg:text-[48px] mb-12">The Old Way vs. The InstaLILY Way</h2>
+      <h2 className="title-text mb-12">The Old Way vs. The InstaLILY Way</h2>
       
       {comparisons.map((comparison, index) => (
         <AnimatedSectionWrapper key={comparison.category} delay={index * 150}>
@@ -41,14 +41,14 @@ export function MobileComparison() {
                   <X className="w-5 h-5 text-black mr-2" />
                   The Old Way
                 </h4>
-                <p className="text-gray-700">{comparison.oldWay}</p>
+                <p className="body-copy text-gray-700">{comparison.oldWay}</p>
               </div>
               <div>
                 <h4 className="font-semibold text-lg mb-2 flex items-center">
                   <Check className="w-5 h-5 text-black mr-2" />
                   The InstaLILY Way
                 </h4>
-                <p className="text-gray-700">{comparison.newWay}</p>
+                <p className="body-copy text-gray-700">{comparison.newWay}</p>
               </div>
             </div>
           </div>

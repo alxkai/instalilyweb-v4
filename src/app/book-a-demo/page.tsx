@@ -31,7 +31,7 @@ export default function BookADemoPage() {
                 <h1 className="text-3xl lg:text-4xl font-bold mb-4 leading-tight">
                   Book a Demo
                 </h1>
-                <p className="text-xl text-gray-300 leading-relaxed">
+                <p className="body-copy text-gray-300">
                   Learn how InstaLILY&apos;s Autonomous AI can work for your enterprise. Simply find a convenient time on the calendar below, and one of our specialists will get in touch.
                 </p>
               </div>

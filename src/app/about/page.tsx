@@ -91,7 +91,7 @@ export default async function AboutPage() {
             {/* Founders */}
             {founderList.length > 0 && (
               <div className="mb-20">
-                <h3 className="text-3xl font-semibold mb-8">Leadership</h3>
+                <h3 className="title-text mb-8">Leadership</h3>
                 <ProfileSection profileList={founderList} />
               </div>
             )}
@@ -99,7 +99,7 @@ export default async function AboutPage() {
             {/* Engineering & Product */}
             {devList.length > 0 && (
               <div className="mb-20">
-                <h3 className="text-3xl font-semibold mb-8">Engineering & Product</h3>
+                <h3 className="title-text mb-8">Engineering & Product</h3>
                 <ProfileSection profileList={devList} />
               </div>
             )}
@@ -107,7 +107,7 @@ export default async function AboutPage() {
             {/* Design */}
             {designList.length > 0 && (
               <div className="mb-20">
-                <h3 className="text-3xl font-semibold mb-8">Design</h3>
+                <h3 className="title-text mb-8">Design</h3>
                 <ProfileSection profileList={designList} />
               </div>
             )}
@@ -115,7 +115,7 @@ export default async function AboutPage() {
             {/* Business */}
             {businessList.length > 0 && (
               <div className="mb-0">
-                <h3 className="text-3xl font-semibold mb-8">Business & Growth</h3>
+                <h3 className="title-text mb-8">Business & Growth</h3>
                 <ProfileSection profileList={businessList} />
               </div>
             )}

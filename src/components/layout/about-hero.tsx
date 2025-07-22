@@ -26,7 +26,7 @@ export function AboutHero({ title, description }: AboutHeroProps) {
           <h1 className="text-3xl lg:text-4xl font-bold mb-4 leading-tight">
             {title}
           </h1>
-          <div className="text-xl text-gray-300">
+          <div className="body-copy text-gray-300">
             <p>{description}</p>
           </div>
         </div>

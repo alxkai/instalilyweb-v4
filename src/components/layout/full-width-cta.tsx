@@ -11,7 +11,7 @@ export function FullWidthCTA() {
           </h2>
         </AnimatedSectionWrapper>
         <AnimatedSectionWrapper delay={150}>
-          <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+          <p className="body-copy text-gray-300 mb-8 max-w-3xl mx-auto">
             Stop waiting for the future of work — build it. Let&apos;s discuss your
             specific challenges and design a deployment plan that delivers
             immediate, measurable ROI.
