@@ -134,7 +134,7 @@ export function TeamSection({ profiles }: TeamSectionProps) {
     <section className="py-12">
       <div className="max-w-[1340px] mx-auto px-4">
         <div className="text-left mb-12">
-          <p className="mb-0 text-[#999999] eyebrow-text">Meet the team building the future of AI agents.</p>
+          <p className="mb-2 font-medium text-[#999999] eyebrow-text">Meet the team building the future of AI agents.</p>
           <p className="title-text">Our Team</p>
         </div>
         <div className="mx-auto mt-8 sm:mt-16 flow-root">

@@ -178,7 +178,7 @@ export function HomePageClient({ profiles }: HomePageClientProps) {
         <div className="max-w-[1340px] mx-auto">
           <AnimatedSectionWrapper>
             <div className="font-medium text-left mb-6 sm:mb-8">
-              <p className="mb-0 text-[#999999] eyebrow-text">Legacy automation is broken.</p>
+              <p className="mb-0 text-[#999999] eyebrow-text mb-2">Legacy automation is broken.</p>
               <p className="title-text">The future is an AI workforce.</p>
             </div>
           </AnimatedSectionWrapper>

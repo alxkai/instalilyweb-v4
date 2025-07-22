@@ -42,7 +42,7 @@ export function Values() {
   return (
     <section className="w-full bg-[#fdfff7]">
       <div className="max-w-7xl mx-auto px-4 py-16">
-        <div className="max-w-3xl">
+        <div className="w-full">
           <h2 className="title-text mb-6">Our Values</h2>
           <div className="subtitle-copy text-gray-600">
             <p>
