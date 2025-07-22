@@ -80,11 +80,11 @@ export function HomePageClient({ profiles }: HomePageClientProps) {
         {/* Hero Text */}
         <div className="absolute inset-0 flex items-center justify-center z-10">
           <div className="w-full max-w-[1340px] px-4 sm:px-6">
-            <div className="[text-shadow:rgba(0,0,0,0.25)_0px_4px_4px] font-['IBM_Plex_Sans'] text-[#fdfff7] text-[32px] sm:text-[48px] md:text-[64px] lg:text-[90px] leading-[1.2] sm:leading-[110px] not-italic text-left">
+            <div className="[text-shadow:rgba(0,0,0,0.25)_0px_4px_4px] font-['IBM_Plex_Sans'] text-[#fdfff7] text-[38px] sm:text-[48px] md:text-[64px] lg:text-[90px] leading-[1.2] sm:leading-[110px] not-italic text-left">
               <p className="block mb-0">Deploy your</p>
               <p className="block mb-0">AI Workforce</p>
             </div>
-            <div className="[text-shadow:rgba(0,0,0,0.25)_0px_4px_4px] font-['IBM_Plex_Sans'] text-[#fdfff7] text-[18px] sm:text-[28px] md:text-[38px] lg:text-[48px] leading-[1.4] sm:leading-[120px] not-italic text-left mt-2 sm:-mt-4">
+            <div className="[text-shadow:rgba(0,0,0,0.25)_0px_4px_4px] font-['IBM_Plex_Sans'] text-[#fdfff7] text-[22px] sm:text-[28px] md:text-[38px] lg:text-[48px] leading-[1.4] sm:leading-[120px] not-italic text-left mt-2 sm:-mt-4">
               <p className="block">Transform work with InstaWorkers™</p>
             </div>
           </div>
