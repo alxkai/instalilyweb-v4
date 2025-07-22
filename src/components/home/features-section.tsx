@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { Plus, Minus } from 'lucide-react';
+import { AnimatedSectionWrapper } from '@/components/layout/animated-section-wrapper';
 
 const features = [
   {
@@ -32,46 +33,47 @@ export function FeaturesSection() {
     <div className="py-24 md:py-32 px-4">
       <h2 className="font-semibold text-[24px] sm:text-[32px] md:text-[40px] lg:text-[48px] text-black mb-12">More than just automation.</h2>
       <div>
-        {features.map((feature) => {
+        {features.map((feature, index) => {
           const isOpen = openFeature === feature.title;
           return (
-            <div
-              key={feature.title}
-              className={`border-b border-gray-200 transition-all duration-300 ease-in-out ${
-                isOpen ? 'bg-[#181818] text-white' : 'bg-transparent text-black'
-              }`}
-            >
+            <AnimatedSectionWrapper key={feature.title} delay={index * 150}>
               <div
-                className="py-8 md:py-12 px-4 md:px-6 cursor-pointer flex justify-between items-center"
-                onClick={() => toggleFeature(feature.title)}
-              >
-                <h3 className="font-medium text-lg md:text-4xl">{feature.title}</h3>
-                <div className="transition-transform duration-300 ease-in-out">
-                  {isOpen ? (
-                    <Minus className="w-6 h-6 md:w-8 md:h-8" />
-                  ) : (
-                    <Plus className="w-6 h-6 md:w-8 md:h-8" />
-                  )}
-                </div>
-              </div>
-              <div
-                className={`overflow-hidden transition-all duration-500 ease-in-out ${
-                  isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                className={`border-b border-gray-200 transition-all duration-300 ease-in-out ${
+                  isOpen ? 'bg-[#181818] text-white' : 'bg-transparent text-black'
                 }`}
               >
-                <div className={`px-4 md:px-6 pb-12 md:pb-16 md:pl-24 transform transition-transform duration-500 ease-in-out ${
-                  isOpen ? 'translate-y-0' : '-translate-y-4'
-                }`}>
-                  <p
-                    className={`text-base md:text-2xl leading-relaxed transition-colors duration-300 ${
-                      isOpen ? 'text-gray-300' : 'text-gray-700'
-                    }`}
-                  >
-                    {feature.description}
-                  </p>
+                <div
+                  className="py-8 md:py-12 px-4 md:px-6 cursor-pointer flex justify-between items-center"
+                  onClick={() => toggleFeature(feature.title)}
+                >
+                  <h3 className="font-medium text-lg md:text-4xl">{feature.title}</h3>
+                  <div className="transition-transform duration-300 ease-in-out">
+                    {isOpen ? (
+                      <Minus className="w-6 h-6 md:w-8 md:h-8" />
+                    ) : (
+                      <Plus className="w-6 h-6 md:w-8 md:h-8" />
+                    )}
+                  </div>
+                </div>
+                <div
+                  className={`overflow-hidden transition-all duration-500 ease-in-out ${
+                    isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                  }`}
+                >
+                  <div className={`px-4 md:px-6 pb-12 md:pb-16 md:pl-24 transform transition-transform duration-500 ease-in-out ${
+                    isOpen ? 'translate-y-0' : '-translate-y-4'
+                  }`}>
+                    <p
+                      className={`text-base md:text-2xl leading-relaxed transition-colors duration-300 ${
+                        isOpen ? 'text-gray-300' : 'text-gray-700'
+                      }`}
+                    >
+                      {feature.description}
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
+            </AnimatedSectionWrapper>
           );
         })}
       </div>

@@ -6,9 +6,10 @@ interface AnimatedSectionProps {
   children: ReactNode
   delay?: number
   className?: string
+  threshold?: number
 }
 
-export function AnimatedSectionWrapper({ children, delay = 0, className = "" }: AnimatedSectionProps) {
+export function AnimatedSectionWrapper({ children, delay = 0, className = "", threshold = 0.2 }: AnimatedSectionProps) {
   const [isVisible, setIsVisible] = useState(false)
   const domRef = useRef<HTMLDivElement>(null)
 
@@ -22,7 +23,7 @@ export function AnimatedSectionWrapper({ children, delay = 0, className = "" }: 
           }
         }
       })
-    }, { threshold: 0.2, rootMargin: "0px 0px -100px 0px" })
+    }, { threshold: threshold, rootMargin: "0px 0px -100px 0px" })
 
     const currentRef = domRef.current
     if (currentRef) {

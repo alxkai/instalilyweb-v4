@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 import { urlForImage } from "@/lib/sanity"
-import { useEffect, useState } from "react"
+import { useEffect, useState, useRef } from "react"
 
 interface ProfileLogoType {
   name: string
@@ -102,6 +102,34 @@ declare global {
 }
 
 export function TeamSection({ profiles }: TeamSectionProps) {
+  const [isVisible, setIsVisible] = useState(false);
+  const gridRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect(); // Animate only once
+        }
+      },
+      {
+        threshold: 0.1, // Start animation when 10% of the grid is visible
+      }
+    );
+
+    const currentRef = gridRef.current;
+    if (currentRef) {
+      observer.observe(currentRef);
+    }
+
+    return () => {
+      if (currentRef) {
+        observer.unobserve(currentRef);
+      }
+    };
+  }, []);
+
   return (
     <section className="py-12">
       <div className="max-w-[1340px] mx-auto px-4">
@@ -110,31 +138,37 @@ export function TeamSection({ profiles }: TeamSectionProps) {
           <p className="font-semibold text-[24px] sm:text-[32px] md:text-[40px] lg:text-[48px]">Our Team</p>
         </div>
         <div className="mx-auto mt-8 sm:mt-16 flow-root">
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-x-4 gap-y-8 sm:gap-x-6 sm:gap-y-12 justify-center">
-            {profiles.map(profile => {
+          <div ref={gridRef} className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-x-4 gap-y-8 sm:gap-x-6 sm:gap-y-12 justify-center">
+            {profiles.map((profile, index) => {
               const imgUrl = urlForImage(profile.img);
               if (!imgUrl) return null;
               const firstName = profile.name.split(' ')[0];
 
               return (
-                <div key={profile._id} className="text-center">
+                <div
+                  key={profile._id}
+                  className={`text-center transition-all duration-1000 ease-out ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+                  style={{
+                    transitionDelay: `${Math.floor(index / 6) * 350}ms`,
+                  }}
+                >
                   <div className="relative w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 mx-auto">
                     <Image
-                        src={imgUrl}
-                        alt={profile.name}
-                        fill
-                        className="rounded-full object-cover grayscale"
-                        style={{ objectPosition: 'center 20%' }}
+                      src={imgUrl}
+                      alt={profile.name}
+                      fill
+                      className="rounded-full object-cover grayscale"
+                      style={{ objectPosition: 'center 20%' }}
                     />
                   </div>
                   <h3 className="mt-3 sm:mt-4 text-sm sm:text-lg font-semibold text-gray-900">{firstName}</h3>
                   <LogoSection profileId={profile._id} profileName={profile.name} />
                 </div>
-              )
+              );
             })}
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 } 

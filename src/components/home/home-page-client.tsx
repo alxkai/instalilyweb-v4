@@ -374,8 +374,11 @@ export function HomePageClient({ profiles }: HomePageClientProps) {
             </AnimatedSectionWrapper>
 
             <AnimatedSectionWrapper delay={150}>
-              <div className="font-normal text-[#000000] text-[16px] sm:text-[20px] md:text-[28px] lg:text-[36px] text-left mb-8 sm:mb-12 max-w-[1339px]">
-                <p className="leading-[1.3]">Generic AI doesn&apos;t understand your business. Our InstaWorkers™ are equipped with deep domain knowledge to solve your most critical challenges.</p>
+              <div className="font-normal text-[16px] sm:text-[20px] md:text-[28px] lg:text-[36px] text-left mb-8 sm:mb-12 max-w-[1339px]">
+                <p className="leading-[1.3]">
+                  <span className="text-[#999999]">Generic AI doesn&apos;t understand your business.</span>
+                  <span className="text-[#000000]"> Our InstaWorkers™ are equipped with deep domain knowledge to solve your most critical challenges.</span>
+                </p>
               </div>
             </AnimatedSectionWrapper>
 
