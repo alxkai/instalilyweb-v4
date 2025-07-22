@@ -137,7 +137,7 @@ export function HomePageClient({ profiles }: HomePageClientProps) {
       </div> */}
 
       {/* Startup Partners Section with Dark Background */}
-      <div className="bg-[#181818] py-0 sm:py-16 md:py-24 px-4">
+      <div className="bg-[#181818] py-12 sm:py-16 md:py-24 px-4">
         <div className="max-w-[1340px] mx-auto">
           <AnimatedSectionWrapper>
             <div className="font-normal text-[#fdfff7] text-[18px] sm:text-[24px] md:text-[30px] lg:text-[36px] text-left mb-8 sm:mb-12">
@@ -146,27 +146,27 @@ export function HomePageClient({ profiles }: HomePageClientProps) {
           </AnimatedSectionWrapper>
 
           <AnimatedSectionWrapper delay={200}>
-            <div className="flex flex-col sm:flex-row items-center justify-center sm:justify-between w-full gap-6 sm:gap-4">
+            <div className="flex flex-row items-center justify-between sm:justify-between w-full gap-2 sm:gap-6">
               <Image 
                 src="/assets/startup0.png" 
                 alt="Partner Logo 1" 
                 width={180} 
                 height={110} 
-                className="object-contain brightness-0 invert w-auto h-16 sm:h-20 md:h-24" 
+                className="object-contain brightness-0 invert w-auto h-12 sm:h-16 md:h-20 lg:h-24" 
               />
               <Image 
                 src="/assets/startup1.png" 
                 alt="Partner Logo 2" 
                 width={240} 
                 height={30} 
-                className="object-contain brightness-0 invert w-auto h-6 sm:h-8 md:h-10" 
+                className="object-contain brightness-0 invert w-auto h-5 sm:h-6 md:h-8 lg:h-10" 
               />
               <Image 
                 src="/assets/startup2.webp" 
                 alt="Partner Logo 3" 
                 width={160} 
                 height={66} 
-                className="object-contain brightness-0 invert w-auto h-12 sm:h-14 md:h-16" 
+                className="object-contain brightness-0 invert w-auto h-10 sm:h-12 md:h-14 lg:h-16" 
               />
             </div>
           </AnimatedSectionWrapper>
