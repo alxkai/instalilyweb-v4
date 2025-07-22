@@ -96,6 +96,7 @@ export default function RootLayout({
           </filter>
         </svg>
         {children}
+        <SpeedInsights />
       </body>
     </html>
   );
