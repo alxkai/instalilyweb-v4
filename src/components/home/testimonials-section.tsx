@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import { AnimatedSectionWrapper } from '@/components/layout/animated-section-wrapper';
 
 const testimonials = [
@@ -75,9 +76,27 @@ export function TestimonialsSection() {
                 className="col-span-10 animate-fade-in"
               >
                 <div className="grid grid-cols-2 gap-8 p-12 items-center">
-                  {/* Image Placeholder */}
-                  <div className="w-full h-80 bg-gray-50 border-2 border-dashed border-gray-300 flex items-center justify-center">
-                    <span className="text-gray-400">Image Placeholder</span>
+                  {/* Image */}
+                  <div className="w-full h-80 relative overflow-hidden rounded-lg">
+                    {selectedTestimonial.id === 1 ? (
+                      <Image
+                        src="/assets/test0.png"
+                        alt="SRS Distribution testimonial"
+                        fill
+                        className="object-cover"
+                      />
+                    ) : selectedTestimonial.id === 2 ? (
+                      <Image
+                        src="/assets/test1.png"
+                        alt="Partstown testimonial"
+                        fill
+                        className="object-cover"
+                      />
+                    ) : (
+                      <div className="w-full h-full bg-gray-50 border-2 border-dashed border-gray-300 flex items-center justify-center">
+                        <span className="text-gray-400">Image Placeholder</span>
+                      </div>
+                    )}
                   </div>
 
                   {/* Quote */}
@@ -122,8 +141,26 @@ export function TestimonialsSection() {
           {testimonials.map((testimonial, index) => (
             <AnimatedSectionWrapper key={testimonial.id} delay={index * 150}>
               <div className="border border-gray-200 rounded-lg p-6">
-              <div className="w-full h-48 bg-gray-50 border-2 border-dashed border-gray-300 flex items-center justify-center mb-4">
-                <span className="text-gray-400">Image Placeholder</span>
+              <div className="w-full h-48 relative overflow-hidden rounded-lg mb-4">
+                {testimonial.id === 1 ? (
+                  <Image
+                    src="/assets/test0.png"
+                    alt="SRS Distribution testimonial"
+                    fill
+                    className="object-cover"
+                  />
+                ) : testimonial.id === 2 ? (
+                  <Image
+                    src="/assets/test1.png"
+                    alt="Partstown testimonial"
+                    fill
+                    className="object-cover"
+                  />
+                ) : (
+                  <div className="w-full h-full bg-gray-50 border-2 border-dashed border-gray-300 flex items-center justify-center">
+                    <span className="text-gray-400">Image Placeholder</span>
+                  </div>
+                )}
               </div>
               <blockquote className="text-lg text-black mb-4 relative">
                 <span className="absolute -left-4 -top-1 text-4xl text-gray-200">“</span>
