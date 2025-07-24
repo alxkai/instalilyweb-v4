@@ -60,13 +60,13 @@ export function FeaturesSection() {
                     isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
                   }`}
                 >
-                  <div className={`px-4 md:px-6 pb-12 md:pb-16 md:pl-24 transform transition-transform duration-500 ease-in-out ${
+                  <div className={`px-4 md:px-6 pb-12 md:pb-16 md:pl-24 pr-8 md:pr-16 transform transition-transform duration-500 ease-in-out ${
                     isOpen ? 'translate-y-0' : '-translate-y-4'
                   }`}>
                     <p
-                      className={`body-copy transition-colors duration-300 ${
+                      className={`subtitle-copy transition-colors duration-300 ${
                         isOpen ? 'text-gray-300' : 'text-gray-700'
-                      }`}
+                      } pr-8 md:pr-16`}
                     >
                       {feature.description}
                     </p>

@@ -60,7 +60,7 @@ export function TestimonialsSection() {
                     onMouseEnter={() => setSelectedTestimonial(testimonial)}
                   >
                     <p
-                      className={`transform -rotate-90 whitespace-nowrap text-sm font-semibold tracking-widest transition-colors ${
+                      className={`transform -rotate-90 whitespace-nowrap text-base font-semibold tracking-widest transition-colors ${
                         selectedTestimonial.id === testimonial.id ? 'text-black' : 'text-gray-400'
                       }`}
                     >
@@ -123,7 +123,7 @@ export function TestimonialsSection() {
                     onMouseEnter={() => setSelectedTestimonial(testimonial)}
                   >
                     <p
-                      className={`transform -rotate-90 whitespace-nowrap text-sm font-semibold tracking-widest transition-colors ${
+                      className={`transform -rotate-90 whitespace-nowrap text-base font-semibold tracking-widest transition-colors ${
                         selectedTestimonial.id === testimonial.id ? 'text-black' : 'text-gray-400'
                       }`}
                     >
@@ -141,7 +141,7 @@ export function TestimonialsSection() {
           {testimonials.map((testimonial, index) => (
             <AnimatedSectionWrapper key={testimonial.id} delay={index * 150}>
               <div className="border border-gray-200 rounded-lg p-6">
-              <div className="w-full h-48 relative overflow-hidden rounded-lg mb-4">
+              <div className="w-full h-64 relative overflow-hidden rounded-lg mb-4">
                 {testimonial.id === 1 ? (
                   <Image
                     src="/assets/test0.png"
