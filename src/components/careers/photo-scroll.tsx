@@ -11,7 +11,6 @@ export function PhotoScroll({ photos }: PhotoScrollProps) {
   const isDraggingRef = useRef(false)
   const startXRef = useRef(0)
   const scrollLeftRef = useRef(0)
-  const isHoveringRef = useRef(false)
   const baseSpeed = 1
 
   useEffect(() => {
@@ -36,7 +35,7 @@ export function PhotoScroll({ photos }: PhotoScrollProps) {
       }
 
       const animate = (timestamp: number) => {
-        if (isDraggingRef.current || isHoveringRef.current) {
+        if (isDraggingRef.current) {
           lastFrameTime = null
           requestAnimationFrame(animate)
           return
@@ -87,12 +86,7 @@ export function PhotoScroll({ photos }: PhotoScrollProps) {
         isDraggingRef.current = false
       }
 
-      const handleMouseEnter = () => {
-        isHoveringRef.current = true
-      }
-
       const handleMouseLeave = () => {
-        isHoveringRef.current = false
         isDraggingRef.current = false
       }
 
@@ -102,7 +96,6 @@ export function PhotoScroll({ photos }: PhotoScrollProps) {
         container.addEventListener('mousemove', handleMouseMove)
         container.addEventListener('mouseup', handleMouseUp)
         container.addEventListener('mouseleave', handleMouseLeave)
-        container.addEventListener('mouseenter', handleMouseEnter)
         document.addEventListener('mouseup', handleMouseUp)
 
         const animationFrame = requestAnimationFrame(animate)
@@ -113,7 +106,6 @@ export function PhotoScroll({ photos }: PhotoScrollProps) {
           container.removeEventListener('mousemove', handleMouseMove)
           container.removeEventListener('mouseup', handleMouseUp)
           container.removeEventListener('mouseleave', handleMouseLeave)
-          container.removeEventListener('mouseenter', handleMouseEnter)
           document.removeEventListener('mouseup', handleMouseUp)
         }
       }

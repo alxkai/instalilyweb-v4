@@ -16,22 +16,22 @@ const getBadgeVariant = (current: string, selected: string) => {
 const getCategoryBadgeStyle = (category: string) => {
   switch (category?.toLowerCase()) {
     case "engineering":
-      return "bg-orange-100 hover:bg-orange-100 text-black"
+      return "bg-orange-100 hover:bg-orange-100 text-black border border-orange-200"
     case "business":
-      return "bg-pink-100 hover:bg-pink-100 text-black"
+      return "bg-pink-100 hover:bg-pink-100 text-black border border-pink-200"
     case "design":
-      return "bg-cyan-100 hover:bg-cyan-100 text-black"
+      return "bg-cyan-100 hover:bg-cyan-100 text-black border border-cyan-200"
     default:
-      return "bg-gray-100 text-gray-700"
+      return "bg-gray-100 text-gray-700 border border-gray-200"
   }
 }
 
 const getTypeBadgeStyle = (type: string) => {
   switch (type?.toLowerCase()) {
     case "internship":
-      return "bg-yellow-100 hover:bg-yellow-100 text-black"
+      return "bg-yellow-100 hover:bg-yellow-100 text-black border border-yellow-200"
     default:
-      return "bg-gray-100 hover:bg-gray-100 text-gray-700"
+      return "bg-gray-100 hover:bg-gray-100 text-gray-700 border border-gray-200"
   }
 }
 
@@ -78,7 +78,7 @@ const JobCard = ({ position }: { position: OpenPositionType }) => {
           </div>
         </div>
         <div className="flex flex-col md:flex-row gap-2 md:gap-4">
-          <span className="text-blue-600 hover:underline font-small md:font-medium">
+          <span className="text-black hover:underline font-semibold">
             {position.title === "Open Position" ? "Submit Resume →" : "Apply →"}
           </span>
         </div>
@@ -163,7 +163,7 @@ export const OpenPositions = forwardRef<HTMLDivElement, OpenPositionsProps>(({ p
                       key={type}
                       // eslint-disable-next-line @typescript-eslint/no-explicit-any
                       variant={getBadgeVariant(type, selectedType) as any}
-                      className="cursor-pointer hover:bg-black hover:text-white"
+                      className="cursor-pointer hover:bg-black hover:text-white border border-gray-200"
                       onClick={() => handleTypeChange(type)}
                     >
                       {type}
@@ -180,7 +180,7 @@ export const OpenPositions = forwardRef<HTMLDivElement, OpenPositionsProps>(({ p
                       key={department}
                       // eslint-disable-next-line @typescript-eslint/no-explicit-any
                       variant={getBadgeVariant(department, selectedDepartment) as any}
-                      className="cursor-pointer hover:bg-black hover:text-white"
+                      className="cursor-pointer hover:bg-black hover:text-white border border-gray-200"
                       onClick={() => handleDepartmentChange(department)}
                     >
                       {department}

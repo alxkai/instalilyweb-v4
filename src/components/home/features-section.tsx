@@ -60,7 +60,7 @@ export function FeaturesSection() {
                     isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
                   }`}
                 >
-                  <div className={`pl-11 pr-0 md:px-6 pb-12 md:pb-16 md:pl-24 md:pr-16 transform transition-transform duration-500 ease-in-out ${
+                  <div className={`pl-10 pr-0 md:px-6 pb-12 md:pb-16 md:pl-[84px] md:pr-16 transform transition-transform duration-500 ease-in-out ${
                     isOpen ? 'translate-y-0' : '-translate-y-4'
                   }`}>
                     <p

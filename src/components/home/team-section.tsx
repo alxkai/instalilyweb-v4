@@ -152,7 +152,7 @@ export function TeamSection({ profiles }: TeamSectionProps) {
                     transitionDelay: `${Math.floor(index / 6) * 350}ms`,
                   }}
                 >
-                  <div className="relative w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 mx-auto">
+                  <div className="relative w-40 h-40 mx-auto">
                     <Image
                       src={imgUrl}
                       alt={profile.name}
