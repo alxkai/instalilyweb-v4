@@ -46,7 +46,7 @@ export function FeaturesSection() {
                   className="py-8 md:py-12 px-4 md:px-6 cursor-pointer flex justify-between items-center"
                   onClick={() => toggleFeature(feature.title)}
                 >
-                  <h3 className="font-medium text-lg md:text-4xl">{feature.title}</h3>
+                  <h3 className="font-medium text-2xl md:text-4xl">{feature.title}</h3>
                   <div className="transition-transform duration-300 ease-in-out">
                     {isOpen ? (
                       <Minus className="w-6 h-6 md:w-8 md:h-8" />
@@ -60,11 +60,11 @@ export function FeaturesSection() {
                     isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
                   }`}
                 >
-                  <div className={`px-4 md:px-6 pb-12 md:pb-16 md:pl-24 pr-8 md:pr-16 transform transition-transform duration-500 ease-in-out ${
+                  <div className={`pl-11 pr-0 md:px-6 pb-12 md:pb-16 md:pl-24 md:pr-16 transform transition-transform duration-500 ease-in-out ${
                     isOpen ? 'translate-y-0' : '-translate-y-4'
                   }`}>
                     <p
-                      className={`subtitle-copy transition-colors duration-300 ${
+                      className={`subtitle-copy !text-left md:!text-justify transition-colors duration-300 ${
                         isOpen ? 'text-gray-300' : 'text-gray-700'
                       } pr-8 md:pr-16`}
                     >

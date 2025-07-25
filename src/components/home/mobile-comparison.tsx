@@ -28,19 +28,21 @@ export function MobileComparison() {
 
   return (
     <div className="md:hidden space-y-8">
-      <h2 className="title-text mb-12">
-        <span className="flex items-center justify-center normal-case">
-          The old way vs. the
-          <Image
-            src="/assets/logo_black.svg"
-            alt="InstaLILY Logo"
-            width={120}
-            height={40}
-            className="h-8 w-auto mx-2"
-          />
-          way
-        </span>
-      </h2>
+      <AnimatedSectionWrapper>
+        <h2 className="title-text mb-12">
+          <span className="flex items-center justify-start normal-case">
+            The old way vs. the
+            <Image
+              src="/assets/logo_black.svg"
+              alt="InstaLILY Logo"
+              width={120}
+              height={40}
+              className="h-8 w-auto mx-2"
+            />
+            way
+          </span>
+        </h2>
+      </AnimatedSectionWrapper>
       
       {comparisons.map((comparison, index) => (
         <AnimatedSectionWrapper key={comparison.category} delay={index * 150}>

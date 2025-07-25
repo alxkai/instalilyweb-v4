@@ -682,7 +682,7 @@ export function IndustrySection() {
               )}
             </div>
             {/* Description */}
-            <div className="px-4 py-2 md:p-8 md:col-span-2">
+            <div className="px-4 py-4 md:p-8 md:col-span-2">
               <p className="body-copy text-gray-700">
                 {selectedIndustry.description}
               </p>
@@ -709,7 +709,7 @@ export function IndustrySection() {
               {isSelected && (
                 <div className="animate-fade-in">
                   {/* Image Placeholder - MOBILE TEST VERSION */}
-                  <div className="w-full h-80">
+                  <div className="w-full h-64">
                     {industry.name === "HEALTHCARE" ? (
                       <HealthcareMobileSVG />
                     ) : industry.name === "FINANCIAL SERVICES" ? (
@@ -723,7 +723,7 @@ export function IndustrySection() {
                     )}
                   </div>
                   {/* Description */}
-                  <div className="p-4">
+                  <div className="px-4 pb-4">
                     <p className="body-copy text-gray-700">
                       {industry.description}
                     </p>
