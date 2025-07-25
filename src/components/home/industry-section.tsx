@@ -25,14 +25,14 @@ const HealthcareDashboardSVG = () => (
   <svg viewBox="-20 0 520 260" className="w-full h-full" fill="none">
     {/* Defs for soft shadow */}
     <defs>
-      <filter id="softShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <filter id="softShadowHealthcareDesktop" x="-50%" y="-50%" width="200%" height="200%">
         <feDropShadow dx="0" dy="4" stdDeviation="10" floodColor="#1e293b" floodOpacity="0.08" />
       </filter>
     </defs>
 
     {/* Patient Record Card - Left */}
     <g transform="translate(20, 50)">
-      <g className="transition-transform duration-200 hover:scale-105" filter="url(#softShadow)">
+      <g className="transition-transform duration-200 hover:scale-105" filter="url(#softShadowHealthcareDesktop)">
         <rect x="0" y="0" width="160" height="110" fill="white" rx="12" />
         <g transform="translate(20, 20)">
           <circle cx="12" cy="12" r="12" fill="#e0f2fe" />
@@ -102,14 +102,14 @@ const FinancialServicesSVG = () => (
   <svg viewBox="-20 0 520 260" className="w-full h-full" fill="none">
     {/* Defs for soft shadow */}
     <defs>
-      <filter id="softShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <filter id="softShadowFinancialDesktop" x="-50%" y="-50%" width="200%" height="200%">
         <feDropShadow dx="0" dy="4" stdDeviation="10" floodColor="#1e293b" floodOpacity="0.08" />
       </filter>
     </defs>
 
     {/* Input Card - Left */}
     <g transform="translate(20, 50)">
-      <g className="transition-transform duration-200 hover:scale-105" filter="url(#softShadow)">
+      <g className="transition-transform duration-200 hover:scale-105" filter="url(#softShadowFinancialDesktop)">
         <rect x="0" y="0" width="160" height="110" fill="white" rx="12" />
         <g transform="translate(20, 20)">
           <path d="M12 0C18.6274 0 24 5.37258 24 12C24 18.6274 18.6274 24 12 24C5.37258 24 0 18.6274 0 12C0 5.37258 5.37258 0 12 0Z" fill="#eef2ff"/>
@@ -178,14 +178,14 @@ const ManufacturingSVG = () => (
   <svg viewBox="-20 0 520 260" className="w-full h-full" fill="none">
     {/* Defs for soft shadow */}
     <defs>
-      <filter id="softShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <filter id="softShadowManufacturingDesktop" x="-50%" y="-50%" width="200%" height="200%">
         <feDropShadow dx="0" dy="4" stdDeviation="10" floodColor="#1e293b" floodOpacity="0.08" />
       </filter>
     </defs>
 
     {/* Input Card - Left */}
     <g transform="translate(20, 50)">
-      <g className="transition-transform duration-200 hover:scale-105" filter="url(#softShadow)">
+      <g className="transition-transform duration-200 hover:scale-105" filter="url(#softShadowManufacturingDesktop)">
         <rect x="0" y="0" width="160" height="110" fill="white" rx="12" />
         <g transform="translate(20, 20)">
           <path d="M12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2Z" fill="#fee2e2" />
@@ -255,14 +255,14 @@ const RetailSVG = () => (
   <svg viewBox="-20 0 570 260" className="w-full h-full" fill="none">
     {/* Defs for soft shadow */}
     <defs>
-      <filter id="softShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <filter id="softShadowRetailDesktop" x="-50%" y="-50%" width="200%" height="200%">
         <feDropShadow dx="0" dy="4" stdDeviation="10" floodColor="#1e293b" floodOpacity="0.08" />
       </filter>
     </defs>
 
     {/* Input Card - Left */}
     <g transform="translate(20, 50)">
-      <g className="transition-transform duration-200 hover:scale-105" filter="url(#softShadow)">
+      <g className="transition-transform duration-200 hover:scale-105" filter="url(#softShadowRetailDesktop)">
         <rect x="0" y="0" width="160" height="110" fill="white" rx="12" />
         <g transform="translate(20, 20)">
           <circle cx="12" cy="12" r="12" fill="#e0f2fe" />
@@ -332,14 +332,14 @@ const HealthcareMobileSVG = () => (
   <svg viewBox="-20 0 540 260" className="w-full h-full" fill="none">
     {/* Defs for soft shadow */}
     <defs>
-      <filter id="softShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <filter id="softShadowHealthcareMobile" x="-50%" y="-50%" width="200%" height="200%">
         <feDropShadow dx="0" dy="4" stdDeviation="10" floodColor="#1e293b" floodOpacity="0.08" />
       </filter>
     </defs>
 
     {/* Patient Record Card - Left */}
     <g transform="translate(20, 50)">
-      <g className="transition-transform duration-200 hover:scale-105" filter="url(#softShadow)">
+      <g className="transition-transform duration-200 hover:scale-105" filter="url(#softShadowHealthcareMobile)">
         <rect x="0" y="0" width="160" height="110" fill="white" rx="12" />
         <g transform="translate(20, 20)">
           <circle cx="12" cy="12" r="12" fill="#e0f2fe" />
@@ -409,14 +409,14 @@ const FinancialMobileSVG = () => (
   <svg viewBox="-20 0 540 260" className="w-full h-full" fill="none">
     {/* Defs for soft shadow */}
     <defs>
-      <filter id="softShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <filter id="softShadowFinancialMobile" x="-50%" y="-50%" width="200%" height="200%">
         <feDropShadow dx="0" dy="4" stdDeviation="10" floodColor="#1e293b" floodOpacity="0.08" />
       </filter>
     </defs>
 
     {/* Input Card - Left */}
     <g transform="translate(20, 50)">
-      <g className="transition-transform duration-200 hover:scale-105" filter="url(#softShadow)">
+      <g className="transition-transform duration-200 hover:scale-105" filter="url(#softShadowFinancialMobile)">
         <rect x="0" y="0" width="160" height="110" fill="white" rx="12" />
         <g transform="translate(20, 20)">
           <path d="M12 0C18.6274 0 24 5.37258 24 12C24 18.6274 18.6274 24 12 24C5.37258 24 0 18.6274 0 12C0 5.37258 5.37258 0 12 0Z" fill="#eef2ff"/>
@@ -485,14 +485,14 @@ const ManufacturingMobileSVG = () => (
   <svg viewBox="-20 0 540 260" className="w-full h-full" fill="none">
     {/* Defs for soft shadow */}
     <defs>
-      <filter id="softShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <filter id="softShadowManufacturingMobile" x="-50%" y="-50%" width="200%" height="200%">
         <feDropShadow dx="0" dy="4" stdDeviation="10" floodColor="#1e293b" floodOpacity="0.08" />
       </filter>
     </defs>
 
     {/* Input Card - Left */}
     <g transform="translate(20, 50)">
-      <g className="transition-transform duration-200 hover:scale-105" filter="url(#softShadow)">
+      <g className="transition-transform duration-200 hover:scale-105" filter="url(#softShadowManufacturingMobile)">
         <rect x="0" y="0" width="160" height="110" fill="white" rx="12" />
         <g transform="translate(20, 20)">
           <path d="M12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2Z" fill="#fee2e2" />
@@ -562,14 +562,14 @@ const RetailMobileSVG = () => (
   <svg viewBox="-20 0 590 260" className="w-full h-full" fill="none">
     {/* Defs for soft shadow */}
     <defs>
-      <filter id="softShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <filter id="softShadowRetailMobile" x="-50%" y="-50%" width="200%" height="200%">
         <feDropShadow dx="0" dy="4" stdDeviation="10" floodColor="#1e293b" floodOpacity="0.08" />
       </filter>
     </defs>
 
     {/* Input Card - Left */}
     <g transform="translate(20, 50)">
-      <g className="transition-transform duration-200 hover:scale-105" filter="url(#softShadow)">
+      <g className="transition-transform duration-200 hover:scale-105" filter="url(#softShadowRetailMobile)">
         <rect x="0" y="0" width="160" height="110" fill="white" rx="12" />
         <g transform="translate(20, 20)">
           <circle cx="12" cy="12" r="12" fill="#e0f2fe" />
